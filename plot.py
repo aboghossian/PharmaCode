@@ -40,8 +40,8 @@ for i, c0 in enumerate(c_init):
         plt.plot(t,c,'-r')
 
 plt.title("BSA vs Flat Dosed Concentration Curve for Docetaxel")
-plt.xlabel('Time')
-plt.ylabel('Concentration')
+plt.xlabel('Time (hr)')
+plt.ylabel('Concentration (mg/L)')
 
 custom_lines = [Line2D([0], [0], color='b', lw=4),
                 Line2D([0], [0], color='r', lw=4)]
