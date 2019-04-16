@@ -2,7 +2,9 @@ import numpy as np
 from scipy.integrate import odeint
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
+import seaborn as sns
 
+sns.set()
 
 c_init = [21.40661516,10.25530253,8.251885902,11.54955859,12.73909004,
           8.900023067,12.19931243,9.601998019,15.20290885,9.507726371,
@@ -33,16 +35,16 @@ for i, c0 in enumerate(c_init):
     k = kel[i]
     c = odeint(deq, c0, t)
     if i <20:
-        plt.plot(t,c,'-m')
+        plt.plot(t,c,'-b')
     else:
-        plt.plot(t,c,'-c')
+        plt.plot(t,c,'-r')
 
 plt.title("BSA vs Flat Dosed Concentration Curve for Docetaxel")
 plt.xlabel('Time')
 plt.ylabel('Concentration')
 
-custom_lines = [Line2D([0], [0], color='m', lw=4),
-                Line2D([0], [0], color='c', lw=4)]
+custom_lines = [Line2D([0], [0], color='b', lw=4),
+                Line2D([0], [0], color='r', lw=4)]
 
 plt.legend(custom_lines, ['BSA', 'Flat-Dosed'],loc='upper right')
 
