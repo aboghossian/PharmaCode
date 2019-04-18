@@ -42,7 +42,7 @@ def deq_flat(c, t):
 c_bsa = odeint(deq_bsa, c0_bsa, t)
 c_flat = odeint(deq_flat, c0_flat, t)
 
-plt.title("Average Patient Concentration Curve (BSA and Flat Doese) for Docetaxel")
+plt.title("Average Patient Concentration Curve (BSA and Flat Dosed) for Docetaxel")
 plt.xlabel('Time (hr)')
 plt.ylabel('Concentration (mg/L)')
 
